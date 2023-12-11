@@ -45,18 +45,19 @@ class HtmlMinifier
      */
     public function minify($html)
     {
-        $cleanedHtml = preg_replace(
-            [
-                '/^\s+/m',           // Menghapus spasi di awal baris
-                '/<!--.*?-->/s',     // Menghapus komentar HTML
-            ],
-            [
-                '',                 // Kosongkan spasi di awal baris
-                '',                 // Kosongkan komentar HTML
-            ],
-            $html
-        );
-        return $cleanedHtml;
+        $search = [
+            '/\>\s+/s',
+            '/\s+</s',
+            '/<!--.*?-->/',
+        ];
+
+        $replace = [
+            '>',
+            '<',
+            '',
+        ];
+
+        return preg_replace($search, $replace, $html);
     }
 
     // public function minify($html)
@@ -76,4 +77,5 @@ class HtmlMinifier
     //         $html
     //     );
     // }
+
 }
