@@ -25,14 +25,14 @@
     <!-- Hero -->
     <div class="max-w-[75rem] mx-auto px-4 sm:px-6 lg:px-8 relative z-[10] mt-20 bg-slate-100 dark:bg-slate-900 border rounded-xl border-gray-200 dark:border-gray-700">
         <!-- Grid -->
-        <div class="grid md:grid-cols-2 gap-4 md:gap-8 xl:gap-20 md:items-center">
+        <div class="grid md:grid-cols-2 gap-4 md:gap-8 xl:gap-20 md:items-center mt-1">
             <div>
                 <h1 class="block text-3xl font-bold text-gray-800 sm:text-4xl lg:text-6xl lg:leading-tight dark:text-white bg-clip-text"><span class="text-blue-600">Zakatel</span></h1>
                 <p class="mt-3 text-lg text-gray-800 dark:text-gray-400">Zakatel adalah sebuah lembaga nir laba yang mengelola zakat, infak, shodaqoh, dan wakaf dan mendistribusikannya kepada yang berhak sesuai syariat Islam.</p>
 
                 <!-- Buttons -->
                 <div class="mt-7 grid gap-3 w-full sm:inline-flex">
-                <a class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="https://donasi.zakatel.id" target="_blank">
+                <a class="py-3 px-4 mb-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="https://donasi.zakatel.id" target="_blank">
                     Donasi Sekarang
                     <svg class="flex-shrink-0 w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
                 </a>
