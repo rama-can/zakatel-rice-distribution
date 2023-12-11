@@ -26,6 +26,7 @@ jobs:
           php artisan config:clear
           php artisan cache:clear
           php artisan key:generate
+          npm install vite --save-dev
           npm run build
       - name: Directory Permissions
         run: chmod 755 -R storage bootstrap/cache
