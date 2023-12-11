@@ -1,37 +1,51 @@
-name: Deploy Laravel Project on push
+name: Deploy
+
 on:
   push:
-    branches:
-      - master
+    branches: [master]
+
 jobs:
-  web-deploy:
+  build_and_deploy:
     name: 🎉 Deploy
     runs-on: ubuntu-latest
+
     steps:
-      - name: 🚚 Get latest code
-        uses: actions/checkout@v2.3.2
-      - uses: actions/setup-node@master
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.1"
+      - uses: actions/checkout@v2
+      - name: Fetch built assets from Artifacts
+        uses: actions/download-artifact@v1
+        with:
+          name: assets
+          path: public
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
       - name: Copy .env
-        run: php -r "file_exists('.env') || copy('.env.example', '.env');"
-      - name: Install Dependencies
-        run: composer update --ignore-platform-reqs
-      - name: Generate key
-        run: php artisan key:generate
-      - name: Generate storage link
-        run: php artisan storage:link
+        run: cp .env.example .env
+      - name: Install composer Dependencies
+        run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+      - name: Install node dependencies
+        run: npm ci
+      - name: Setup Project
+        run: |
+          php artisan config:clear
+          php artisan cache:clear
+          php artisan key:generate
+          npm run build
       - name: Directory Permissions
-        run: chmod -R 777 storage bootstrap/cache
-      - name: 📂 Sync files
+        run: chmod 755 -R storage bootstrap/cache
+
+      - name: 📂 Deploy to Server
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /
           protocol: ftps
           port: 21
           exclude: |
             */.git
             /.git/*
             /node_modules/
-            /storage/
