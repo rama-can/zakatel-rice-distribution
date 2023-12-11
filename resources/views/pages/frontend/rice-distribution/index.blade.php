@@ -1,5 +1,7 @@
 <x-front-layout>
-    @section('title'){{ __('Distribusi Beras') }}@endsection
+    @section('title', 'Distribusi Beras')
+    @section('description', \App\Helpers\SettingHelper::descSite())
+    @section('image', url('storage/'.$getTheme['logo'] ))
         <!-- End Card Blog -->
         <div class="relative mb-8 lg:mb-16">
             <!-- Gradients -->

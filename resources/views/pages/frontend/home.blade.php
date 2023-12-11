@@ -1,4 +1,7 @@
-<x-front-layout>@section('title'){{ __('Home') }}@endsection
+<x-front-layout>
+    @section('title', 'Home')
+    @section('description', \App\Helpers\SettingHelper::descSite())
+    @section('image', url('storage/'.$getTheme['logo'] ))
     <!-- Hero -->
     <div class="relative overflow-hidden">
         <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-5">

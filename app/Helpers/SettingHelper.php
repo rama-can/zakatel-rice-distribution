@@ -11,6 +11,11 @@ class SettingHelper
         return Storage::url('images/general/default-image.webp');
     }
 
+    public static function descSite()
+    {
+        return 'Zakatel adalah sebuah lembaga nir laba yang mengelola zakat, infak, shodaqoh, dan wakaf dan mendistribusikannya kepada yang berhak sesuai syariat Islam.';
+    }
+
     public static function convert($content)
     {
         $classConversion = [

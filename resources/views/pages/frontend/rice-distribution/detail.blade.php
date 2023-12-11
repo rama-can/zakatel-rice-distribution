@@ -1,5 +1,7 @@
 <x-front-layout>
-@section('title'){{ $data->title }}@endsection
+    @section('title', $data->title)
+    @section('description', $data->description)
+    @section('image', url('storage/'.$data->image ))
 @push('styles')
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>

@@ -1,6 +1,8 @@
 <x-front-layout>
-    @section('title'){{ $data->title }}@endsection
-        <!-- Blog Article -->
+    @section('title', $data->title)
+    @section('description', $data->description)
+    @section('image', url('storage/'.$data->image ))
+    <!-- Blog Article -->
     <div class="max-w-3xl px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto relative z-[10]">
         <div class="max-w-2xl">
           <!-- Content -->

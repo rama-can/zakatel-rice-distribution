@@ -4,9 +4,22 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-
+        <meta name="robots" content="noindex, nofollow">
         <title>@yield('title') | {{ $getTheme['site_title'] }}</title>
-        <link rel="shortcut icon" href="{{ Storage::url($getTheme['favicon']) }}">
+        <meta name="description" content="@yield('description')">
+        <!-- Tag Open Graph untuk Media Sosial -->
+        <meta property="og:title" content="@yield('title') | {{ $getTheme['site_title'] }}">
+        <meta property="og:description" content="@yield('description')">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="{{ request()->fullUrl() }}">
+        <meta property="og:image" content="@yield('image')">
+        <!-- Tag Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="@yield('title') | {{ $getTheme['site_title'] }}">
+        <meta name="twitter:description" content="@yield('description')">
+        <meta name="twitter:image" content="@yield('image')">
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="{{ url('storage/'.$getTheme['favicon']) }}">
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('assets/nprogress/nprogress.css') }}">
         <script src="{{ asset('assets/nprogress/nprogress.js') }}"></script>
