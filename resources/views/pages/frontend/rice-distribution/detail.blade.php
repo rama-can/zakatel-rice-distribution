@@ -26,10 +26,10 @@
                 @endif
             </div>
             <div class="col-span-2 md:col-span-1 text-sm font-semibold text-gray-800 dark:text-gray-200 inline-flex">
-                <x-tabler-calculator class="flex-shrink-0 w-5 h-5 mt-0.5 mr-0.5" />Jumlah: {{ $data->quantity_distributed }} Kg
+                <x-tabler-calculator class="flex-shrink-0 w-5 h-5 mb-0.5 mr-0.5" />Jumlah: {{ $data->quantity_distributed }} Kg
             </div>
             <div class="text-sm font-semibold text-gray-800 dark:text-gray-200 inline-flex">
-                <x-tabler-calendar-event class="flex-shrink-0 w-5 h-5 mt-0.5 mr-0.5" /> {{ $date }}
+                <x-tabler-calendar-event class="flex-shrink-0 w-5 h-5 mb-0.5 mr-0.5" /> {{ $date }}
             </div>
             <div class="col-span-2 md:col-span-1">
                 <button type="button" class="py-1.5 px-2 inline-flex items-center gap-x-1.5 text-xs font-semibold rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" data-hs-overlay="#maps-modal">
