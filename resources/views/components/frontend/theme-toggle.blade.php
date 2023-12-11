@@ -39,6 +39,6 @@
             setMode(value);
         }
 
-        setMode(localStorage.getItem('darkModeFrontend') || 'false');
+        setMode(localStorage.getItem('darkModeFrontend') || 'true');
     </script>
   </div>
