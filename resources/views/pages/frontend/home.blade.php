@@ -1,29 +1,27 @@
 <x-front-layout>@section('title'){{ __('Home') }}@endsection
     <!-- Hero -->
-<div class="relative overflow-hidden">
-    <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-5">
-      <div class="max-w-2xl text-center mx-auto">
-        <h1 class="block text-3xl font-bold text-gray-800 sm:text-4xl md:text-5xl dark:text-white">
-            {{-- {{ $getTheme['site_title'] }} --}}
-            <span class="bg-clip-text bg-gradient-to-tl from-indigo-500 to-blue-500 text-transparent ">{{ $getTheme['site_title'] }}</span>
-        </h1>
-        <p class="mt-2 text-lg text-gray-800 dark:text-gray-100"><u>"Mendistribusikan kepada yang berhak"</u></p>
-      </div>
+    <div class="relative overflow-hidden">
+        <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-5">
+            <div class="max-w-2xl text-center mx-auto">
+                <h1 class="block text-3xl font-bold text-gray-800 sm:text-4xl md:text-5xl dark:text-white">
+                    <span class="bg-clip-text bg-gradient-to-tl from-indigo-500 to-blue-500 text-transparent">{{ $getTheme['site_title'] }}</span>
+                </h1>
+                <p class="mt-2 text-lg text-gray-800 dark:text-gray-100"><u>"Mendistribusikan kepada yang berhak"</u></p>
+            </div>
 
-      <div class="mt-10 relative max-w-5xl mx-auto sm:block">
-        <div class="w-full object-cover h-40 sm:h-[60vh] bg-[url('https://zakatel-demo.dlalajo.com//storage/images/general/home-banner.webp')] bg-no-repeat bg-center bg-cover rounded-xl"></div>
+            <div class="mt-10 relative max-w-5xl mx-auto sm:block">
+                <img src="https://zakatel-demo.dlalajo.com/storage/images/general/home-banner.webp" alt="Banner" class="w-full object-cover h-40 sm:h-[60vh] rounded-xl">
+                <div class="absolute bottom-0 -start-20 -z-[1] w-48 h-48 bg-gradient-to-b from-orange-500 to-white p-px rounded-lg dark:to-slate-900">
+                    <div class="bg-slate-50 w-48 h-48 rounded-lg dark:bg-slate-900"></div>
+                </div>
 
-        <div class="absolute bottom-0 -start-20 -z-[1] w-48 h-48 bg-gradient-to-b from-orange-500 to-white p-px rounded-lg dark:to-slate-900">
-          <div class="bg-slate-50 w-48 h-48 rounded-lg dark:bg-slate-900"></div>
+                <div class="absolute -top-12 -end-20 -z-[1] w-48 h-48 bg-gradient-to-t from-blue-600 to-cyan-400 p-px rounded-full">
+                    <div class="bg-slate-50 w-48 h-48 rounded-full dark:bg-slate-900"></div>
+                </div>
+            </div>
         </div>
-
-        <div class="absolute -top-12 -end-20 -z-[1] w-48 h-48 bg-gradient-to-t from-blue-600 to-cyan-400 p-px rounded-full">
-          <div class="bg-slate-50 w-48 h-48 rounded-full dark:bg-slate-900"></div>
-        </div>
-      </div>
     </div>
-</div>
-  <!-- End Hero -->
+    <!-- End Hero -->
     <!-- Hero -->
     <div class="max-w-[75rem] mx-auto px-4 sm:px-6 lg:px-8 relative z-[10] mt-20 bg-slate-100 dark:bg-slate-900 border rounded-xl border-gray-200 dark:border-gray-700">
         <!-- Grid -->
@@ -51,43 +49,6 @@
         <!-- End Grid -->
     </div>
     <!-- End Hero -->
-    <!-- Sejarah -->
-{{-- <div class="relative overflow-hidden">
-    <div class="max-w-[75rem] px-4 py-12 sm:px-6 lg:px-8 lg:py-16 mx-auto bg-slate-100 dark:bg-slate-900 border rounded-xl border-gray-200 dark:border-gray-700 mt-20">
-
-      <!-- Grid -->
-      <div class="lg:grid lg:grid-cols-6 lg:gap-8 lg:items-center">
-        <div class="hidden lg:block lg:col-span-2">
-          <img class="rounded-xl" src="https://images.unsplash.com/photo-1671726203390-cdc4354ee2eb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="Image Description">
-        </div>
-        <!-- End Col -->
-
-        <div class="lg:col-span-4 mb-20">
-          <!-- Blockquote -->
-          <blockquote>
-            <p class="text-xl font-medium text-gray-800 lg:text-2xl lg:leading-normal dark:text-gray-200">
-              Sejarah Zakatel
-            </p>
-            <div class="text-sm font-medium text-gray-600 dark:text-gray-400">
-                {!! $getTheme['zakatel_sejarah'] !!}
-            </div>
-
-            <footer class="mt-6">
-              <div class="flex items-center">
-                <div class="lg:hidden flex-shrink-0">
-                  <img class="h-12 w-12 rounded-full" src="https://images.unsplash.com/photo-1671726203390-cdc4354ee2eb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80" alt="Image Description">
-                </div>
-              </div>
-            </footer>
-          </blockquote>
-          <!-- End Blockquote -->
-        </div>
-        <!-- End Col -->
-      </div>
-      <!-- End Grid -->
-    </div>
-  </div> --}}
-  <!-- End Sejarah -->
     <!-- End Card Blog -->
     <div class="relative mb-8 lg:mb-16">
         <!-- Gradients -->
@@ -142,66 +103,66 @@
     </div>
     <!-- End Card Blog -->
     <!-- FAQ -->
-<div class="max-w-[80rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto g-slate-100 dark:bg-slate-900 border rounded-xl border-gray-200 dark:border-gray-700">
-    <!-- Grid -->
-    <div class="grid md:grid-cols-5 gap-10">
-      <div class="md:col-span-2">
-        <div class="max-w-xs">
-          <h2 class="text-2xl font-bold md:text-4xl md:leading-tight dark:text-white">Pertanyaan</h2>
-          <p class="mt-1 hidden md:block text-gray-600 dark:text-gray-400">
-            Jawaban atas pertanyaan yang paling sering diajukan.
-            </p>
+    <div class="max-w-[80rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto g-slate-100 dark:bg-slate-900 border rounded-xl border-gray-200 dark:border-gray-700">
+        <!-- Grid -->
+        <div class="grid md:grid-cols-5 gap-10">
+        <div class="md:col-span-2">
+            <div class="max-w-xs">
+            <h2 class="text-2xl font-bold md:text-4xl md:leading-tight dark:text-white">Pertanyaan</h2>
+            <p class="mt-1 hidden md:block text-gray-600 dark:text-gray-400">
+                Jawaban atas pertanyaan yang paling sering diajukan.
+                </p>
+            </div>
         </div>
-      </div>
-      <!-- End Col -->
+        <!-- End Col -->
 
-      <div class="md:col-span-3">
-        <!-- Accordion -->
-        <div class="hs-accordion-group divide-y divide-gray-200 dark:divide-gray-700">
-          <div class="hs-accordion pb-3 active" id="hs-basic-with-title-and-arrow-stretched-heading-one">
-            <button class="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-gray-800 rounded-lg transition hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-one">
-              Visi
-              <svg class="hs-accordion-active:hidden block flex-shrink-0 w-5 h-5 text-gray-600 group-hover:text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-              <svg class="hs-accordion-active:block hidden flex-shrink-0 w-5 h-5 text-gray-600 group-hover:text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
-            </button>
-            <div id="hs-basic-with-title-and-arrow-stretched-collapse-one" class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-one">
-                <article class="prose text-base text-gray-600 dark:text-gray-400">
-                    {!! $getTheme['zakatel_visi'] !!}
-                </article>
+        <div class="md:col-span-3">
+            <!-- Accordion -->
+            <div class="hs-accordion-group divide-y divide-gray-200 dark:divide-gray-700">
+            <div class="hs-accordion pb-3 active" id="hs-basic-with-title-and-arrow-stretched-heading-one">
+                <button class="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-gray-800 rounded-lg transition hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-one">
+                Visi
+                <svg class="hs-accordion-active:hidden block flex-shrink-0 w-5 h-5 text-gray-600 group-hover:text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                <svg class="hs-accordion-active:block hidden flex-shrink-0 w-5 h-5 text-gray-600 group-hover:text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+                </button>
+                <div id="hs-basic-with-title-and-arrow-stretched-collapse-one" class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-one">
+                    <article class="prose text-base text-gray-600 dark:text-gray-400">
+                        {!! $getTheme['zakatel_visi'] !!}
+                    </article>
+                </div>
             </div>
-          </div>
 
-          <div class="hs-accordion pt-6 pb-3" id="hs-basic-with-title-and-arrow-stretched-heading-two">
-            <button class="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-gray-800 rounded-lg transition hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-two">
-                MISI
-              <svg class="hs-accordion-active:hidden block flex-shrink-0 w-5 h-5 text-gray-600 group-hover:text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-              <svg class="hs-accordion-active:block hidden flex-shrink-0 w-5 h-5 text-gray-600 group-hover:text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
-            </button>
-            <div id="hs-basic-with-title-and-arrow-stretched-collapse-two" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-two">
-                <article class="prose text-base text-gray-600 dark:text-gray-400">
-                    {!! $getTheme['zakatel_misi'] !!}
-                </article>
+            <div class="hs-accordion pt-6 pb-3" id="hs-basic-with-title-and-arrow-stretched-heading-two">
+                <button class="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-gray-800 rounded-lg transition hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-two">
+                    MISI
+                <svg class="hs-accordion-active:hidden block flex-shrink-0 w-5 h-5 text-gray-600 group-hover:text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                <svg class="hs-accordion-active:block hidden flex-shrink-0 w-5 h-5 text-gray-600 group-hover:text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+                </button>
+                <div id="hs-basic-with-title-and-arrow-stretched-collapse-two" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-two">
+                    <article class="prose text-base text-gray-600 dark:text-gray-400">
+                        {!! $getTheme['zakatel_misi'] !!}
+                    </article>
+                </div>
             </div>
-          </div>
 
-          <div class="hs-accordion pt-6 pb-3" id="hs-basic-with-title-and-arrow-stretched-heading-three">
-            <button class="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-gray-800 rounded-lg transition hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-three">
-                LEGALITAS
-              <svg class="hs-accordion-active:hidden block flex-shrink-0 w-5 h-5 text-gray-600 group-hover:text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-              <svg class="hs-accordion-active:block hidden flex-shrink-0 w-5 h-5 text-gray-600 group-hover:text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
-            </button>
-            <div id="hs-basic-with-title-and-arrow-stretched-collapse-three" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-three">
-                <article class="prose text-base text-gray-600 dark:text-gray-400">
-                    {!! $getTheme['zakatel_legalitas'] !!}
-                </article>
+            <div class="hs-accordion pt-6 pb-3" id="hs-basic-with-title-and-arrow-stretched-heading-three">
+                <button class="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-gray-800 rounded-lg transition hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-three">
+                    LEGALITAS
+                <svg class="hs-accordion-active:hidden block flex-shrink-0 w-5 h-5 text-gray-600 group-hover:text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                <svg class="hs-accordion-active:block hidden flex-shrink-0 w-5 h-5 text-gray-600 group-hover:text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+                </button>
+                <div id="hs-basic-with-title-and-arrow-stretched-collapse-three" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-three">
+                    <article class="prose text-base text-gray-600 dark:text-gray-400">
+                        {!! $getTheme['zakatel_legalitas'] !!}
+                    </article>
+                </div>
             </div>
-          </div>
+            </div>
+            <!-- End Accordion -->
         </div>
-        <!-- End Accordion -->
-      </div>
-      <!-- End Col -->
+        <!-- End Col -->
+        </div>
+        <!-- End Grid -->
     </div>
-    <!-- End Grid -->
-  </div>
-  <!-- End FAQ -->
+    <!-- End FAQ -->
 </x-front-layout>
