@@ -11,7 +11,7 @@
       </div>
 
       <div class="mt-10 relative max-w-5xl mx-auto sm:block">
-        <div class="w-full object-cover h-40 sm:h-[60vh] bg-[url('http://127.0.0.1:8000/storage/images/general/home-banner.jpeg')] bg-no-repeat bg-center bg-cover rounded-xl"></div>
+        <div class="w-full object-cover h-40 sm:h-[60vh] bg-[url('https://zakatel-demo.dlalajo.com//storage/images/general/home-banner.webp')] bg-no-repeat bg-center bg-cover rounded-xl"></div>
 
         <div class="absolute bottom-0 -start-20 -z-[1] w-48 h-48 bg-gradient-to-b from-orange-500 to-white p-px rounded-lg dark:to-slate-900">
           <div class="bg-slate-50 w-48 h-48 rounded-lg dark:bg-slate-900"></div>
