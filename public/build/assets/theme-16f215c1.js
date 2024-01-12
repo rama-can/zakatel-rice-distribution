@@ -1,1 +1,0 @@
-import{m as e}from"./module.esm-1bbf6157.js";window.Alpine=e;e.start();document.addEventListener("DOMContentLoaded",()=>{});document.addEventListener("DOMContentLoaded",function(){NProgress.start()});window.addEventListener("beforeunload",function(){NProgress.start()});window.addEventListener("load",function(){NProgress.done()});
