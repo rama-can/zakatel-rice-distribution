@@ -1,5 +1,5 @@
 <div class="hs-dropdown" data-hs-dropdown-placement="bottom-right" data-hs-dropdown-offset="30" x-data="{ open: false, darkModeFrontend: '', svgMode: 'false' }" x-init="darkModeFrontend = localStorage.getItem('darkModeFrontend') || 'false'; svgMode = darkModeFrontend">
-    <button type="button" class="hs-dropdown-toggle group flex items-center text-gray-600 hover:text-blue-600 font-medium dark:text-gray-400 dark:hover:text-gray-500">
+    <button type="button" class="hs-dropdown-toggle group flex items-center text-gray-600 hover:text-blue-600 font-medium dark:text-gray-400 dark:hover:text-gray-500" x-cloak>
         <x-tabler-sun-filled x-show="svgMode === 'false'" class="w-5 h-5 text-gray-500 dark:text-gray-400"/>
         {{-- Dark --}}
         <x-tabler-moon-stars x-show="svgMode === 'true'" class="w-5 h-5 text-gray-500 dark:text-gray-400"/>
