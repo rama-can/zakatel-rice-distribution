@@ -22,7 +22,7 @@
                     <!-- End Title -->
                     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                         @foreach ($distributions as $data)
-                        <a class="relative rounded-xl before:absolute before:inset-0 before:z-10 before:border before:border-gray-200 before:rounded-xl before:transition before:hover:border-2 before:hover:border-blue-600 before:hover:shadow-lg dark:bg-[#151c2f] dark:before:border-gray-700 dark:before:hover:border-blue-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                        <a class="relative rounded-xl before:absolute before:inset-0 before:z-10 before:border before:border-gray-200 before:rounded-xl before:transition before:hover:border-2 before:hover:border-blue-600 before:hover:shadow-lg dark:bg-slate-900 dark:before:border-gray-700 dark:before:hover:border-blue-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
                         href="{{ route('distribution.detail', $data->slug) }}">
                             <div class="relative pt-[50%]">
                                 <div class="flex animate-pulse">
@@ -34,9 +34,6 @@
                                 <img class="hidden w-full h-full absolute top-0 start-0 object-cover rounded-t-xl dark:block" src="{{ Storage::url($data->image) }}" alt="Image Description">
                             </div>
                             <div class="bg-white py-3.5 px-4 rounded-b-xl dark:bg-slate-900">
-                                <h3 class="mt-1 text-xl text-gray-800 dark:text-gray-300 dark:hover:text-white">
-                                    {{ $data->title }}
-                                </h3>
                                 @if ($data->status === 'pending')
                                     <span class="inline-flex items-center gap-x-1.5 py-1 px-1 rounded-lg text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-800/30 dark:text-yellow-500">Pending</span>
                                 @elseif ($data->status === 'dalam pengiriman')
@@ -44,7 +41,9 @@
                                 @elseif ($data->status === 'selesai')
                                     <span class="inline-flex items-center gap-x-1.5 py-1 px-1 rounded-lg text-xs font-medium bg-teal-100 text-teal-800 dark:bg-teal-800/30 dark:text-teal-500">Selesai</span>
                                 @endif
-                                <br>
+                                <h3 class="mt-1 text-xl text-gray-800 dark:text-gray-300 dark:hover:text-white">
+                                    {{ $data->title }}
+                                </h3>
                                 <p
                                     class="mt-1 inline-flex items-center gap-x-1 text-sm font-semibold text-gray-800 dark:text-gray-200">
                                     Lihat Selengkapnya
