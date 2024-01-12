@@ -15,6 +15,7 @@ use App\Http\Controllers\FrontController;
 */
 Route::get('/', [FrontController::class, 'index'])->name('home');
 Route::get('/distribusi-beras', [FrontController::class, 'distribution'])->name('distribution');
+Route::get('/laporan-beras', [FrontController::class, 'riceReport'])->name('rice.report');
 Route::get('/{slug}', [FrontController::class, 'distributionBySlug'])->name('distribution.detail');
 Route::get('/page/{slug}', [FrontController::class, 'pageBySlug'])->name('page.detail');
 

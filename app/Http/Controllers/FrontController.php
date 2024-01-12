@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Page;
+use App\Models\RiceIn;
+use App\Models\RiceOut;
 use App\Models\RiceDistribution;
 use App\Http\Requests\PageRequest;
 
@@ -39,5 +41,15 @@ class FrontController extends Controller
         return view('pages.frontend.page', [
             'data' => Page::where('slug', $slug)->firstOrFail()
         ]);
+    }
+
+    public function riceReport()
+    {
+        $inRices = RiceIn::all();
+        $outRices = RiceOut::with('riceDistribution')->get();
+        return view('pages.frontend.rice-report', compact(
+            'inRices',
+            'outRices'
+        ));
     }
 }
