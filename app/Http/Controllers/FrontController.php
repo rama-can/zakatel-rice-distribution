@@ -5,8 +5,11 @@ namespace App\Http\Controllers;
 use App\Models\Page;
 use App\Models\RiceIn;
 use App\Models\RiceOut;
+use App\Exports\RiceInExport;
+use App\Exports\RiceOutExport;
 use App\Models\RiceDistribution;
 use App\Http\Requests\PageRequest;
+use Maatwebsite\Excel\Facades\Excel;
 
 class FrontController extends Controller
 {
@@ -51,5 +54,15 @@ class FrontController extends Controller
             'inRices',
             'outRices'
         ));
+    }
+
+    public function inRiceExport()
+    {
+        return Excel::download(new RiceInExport, 'data-pemasukan-beras-zakat.xlsx');
+    }
+
+    public function outRiceExport()
+    {
+        return Excel::download(new RiceOutExport, 'data-pengeluaran-beras-zakat.xlsx');
     }
 }

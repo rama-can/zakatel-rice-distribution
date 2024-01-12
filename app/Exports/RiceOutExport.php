@@ -28,7 +28,7 @@ class RiceOutExport implements WithColumnFormatting, FromCollection, WithHeading
             'Jumlah',
             'Destinasi',
             'Status',
-            'Dibuat pada',
+            'Tanggal Distribusi',
         ];
     }
 

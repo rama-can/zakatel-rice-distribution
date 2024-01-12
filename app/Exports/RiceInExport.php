@@ -28,7 +28,7 @@ class RiceInExport implements FromCollection, WithHeadings, WithMapping, WithCol
             'Jumlah',
             'Sumber',
             'Nama Sumber',
-            'Dibuat pada',
+            'Tanggal Masuk',
         ];
     }
 
