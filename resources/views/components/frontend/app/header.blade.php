@@ -32,8 +32,10 @@
                     aria-current="page">Home</a>
                 <a class="font-semibold {{  request()->routeIs('distribution') || request()->routeIs('distribution.detail') ? 'text-indigo-600 dark:text-indigo-500' : 'text-gray-500 dark:text-gray-400'  }} hover:text-indigo-500 dark:hover:text-indigo-500 sm:py-6"
                     href="{{ route('distribution') }}">Distribusi Beras</a>
+                <a class="font-semibold {{  request()->routeIs('rice.report') ? 'text-indigo-600 dark:text-indigo-500' : 'text-gray-500 dark:text-gray-400'  }} hover:text-indigo-500 dark:hover:text-indigo-500 sm:py-6"
+                    href="{{ route('rice.report', 'laporan-beras') }}">Laporan Beras</a>
                 <a class="font-semibold {{  request()->routeIs('page.detail') ? 'text-indigo-600 dark:text-indigo-500' : 'text-gray-500 dark:text-gray-400'  }} hover:text-indigo-500 dark:hover:text-indigo-500 sm:py-6"
-                    href="{{ route('page.detail', 'tentang-kami') }}">Tentang Kami</a>
+                        href="{{ route('page.detail', 'tentang-kami') }}">Tentang Kami</a>
                 <span class="flex items-center gap-x-2 font-semibold text-gray-500 hover:text-indigo-500 sm:border-s sm:border-gray-300 sm:my-6 sm:ps-6 dark:border-gray-700 dark:text-gray-400 dark:hover:text-indigo-500"
                     >
                     <x-frontend.theme-toggle />
