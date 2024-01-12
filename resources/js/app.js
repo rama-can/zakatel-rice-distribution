@@ -6,6 +6,9 @@ import mask from "@alpinejs/mask";
 // Import flatpickr
 import flatpickr from "flatpickr";
 
+// Import Chart
+import "./components/rice";
+
 // Call Alpine
 window.Alpine = Alpine;
 Alpine.plugin(mask);

@@ -19,16 +19,25 @@ class RiceInSeeder extends Seeder
                 'quantity' => 100,
                 'source' => 'individual',
                 'contributor_name' => 'Rama Can',
+                'created_at' => '2023-10-01'
             ],
             [
                 'quantity' => 600,
                 'source' => 'corporate',
                 'contributor_name' => 'PT. Telkom Indonesia',
+                'created_at' => '2023-11-02'
             ],
             [
                 'quantity' => 400,
                 'source' => 'corporate',
                 'contributor_name' => 'PT. PLN',
+                'created_at' => '2023-12-02'
+            ],
+            [
+                'quantity' => 500,
+                'source' => 'corporate',
+                'contributor_name' => 'PT. Bukaka Indonesia',
+                'created_at' => '2024-01-02'
             ],
         ];
 
